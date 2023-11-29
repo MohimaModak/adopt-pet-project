@@ -1,0 +1,22 @@
+ [
+    { "petName": "Dog", "maxAmount": 500, "currentAmount": 250, 
+    "imageUrl": "https://images.pexels.com/photos/4453061/pexels-photo-4453061.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" },
+    { "petName": "Cat", "maxAmount": 300, "currentAmount": 100, 
+    "imageUrl": "https://images.pexels.com/photos/2194261/pexels-photo-2194261.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    { "petName": "Rabbit", "maxAmount": 200, "currentAmount": 50, 
+    "imageUrl": "https://images.pexels.com/photos/6897439/pexels-photo-6897439.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    { "petName": "Bird", "maxAmount": 150, "currentAmount": 75, 
+    "imageUrl": "https://images.pexels.com/photos/1040400/pexels-photo-1040400.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    { "petName": "Fish", "maxAmount": 100, "currentAmount": 25, 
+    "imageUrl": "https://images.pexels.com/photos/128756/pexels-photo-128756.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    { "petName": "Hamster", "maxAmount": 50, "currentAmount": 10, 
+    "imageUrl": "https://images.pexels.com/photos/4520481/pexels-photo-4520481.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    { "petName": "Turtle", "maxAmount": 400, "currentAmount": 200, 
+    "imageUrl": "https://images.pexels.com/photos/3150271/pexels-photo-3150271.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    { "petName": "Ferret", "maxAmount": 120, "currentAmount": 60, 
+    "imageUrl": "https://images.pexels.com/photos/5403275/pexels-photo-5403275.jpeg?auto=compress&cs=tinysrgb&w=600" },
+    { "petName": "Guinea Pig", "maxAmount": 180, "currentAmount": 90, 
+    "imageUrl": "https://images.pexels.com/photos/66627/pexels-photo-66627.jpeg?auto=compress&cs=tinysrgb&w=600" }
+  ]
+  
+  

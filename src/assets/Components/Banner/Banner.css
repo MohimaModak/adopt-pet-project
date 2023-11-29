@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@700&family=Roboto:wght@300&display=swap");
+.bannefont {
+  font-family: "Playpen Sans", cursive;
+}
+
+.bannebackground {
+  background-color: rgba(44, 42, 42, 0.158);
+  backdrop-filter: blur(50px);
+}
+
