@@ -35,7 +35,7 @@ const AddAPet = () => {
 
     axios
       .post(
-        "http://localhost:2000/addpet",
+        "https://final-project-server-eight.vercel.app/addpet",
 
         addpets
       )

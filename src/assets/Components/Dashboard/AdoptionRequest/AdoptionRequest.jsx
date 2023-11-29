@@ -11,7 +11,7 @@ const AdoptionRequest = () => {
   const [pausedDonation, setpausedDonation] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:2000/adoptPet")
+    fetch("https://final-project-server-eight.vercel.app/adoptPet")
       .then((res) => res.json())
       .then((data) => {
         const specificPause = {};
@@ -37,9 +37,12 @@ const AdoptionRequest = () => {
       confirmButtonText: "Yes, I want",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:2000/adoptPet/${name}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://final-project-server-eight.vercel.app/adoptPet/${name}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
@@ -75,9 +78,10 @@ const AdoptionRequest = () => {
                 />
               </td>
               <td className="border border-gray-200 p-2">{adopt.name}</td>
-              <td className="border border-gray-200 p-2">{adopt.location}</td>
               <td className="border border-gray-200 p-2">{adopt.email}</td>
               <td className="border border-gray-200 p-2">{adopt.category}</td>
+              <td className="border border-gray-200 p-2">{adopt.location}</td>
+
               <div
                 onClick={() => handlePausedDonation(adopt._id)}
                 className="flex justify-center items-end inset-0"

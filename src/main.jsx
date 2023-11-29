@@ -24,6 +24,7 @@ import DonationDetails from "./assets/Components/DonationDetails/DonationDetails
 import AllUsers from "./assets/Components/Dashboard/AllUsers/AllUsers.jsx";
 import Edit from "./assets/Components/Dashboard/Edit/Edit.jsx";
 import ErrorPage from "./assets/Components/ErrorPage/ErrorPage.jsx";
+import PrivateRouter from "./assets/Components/PrivateRouter/PrivateRouter.jsx";
 
 const router = createBrowserRouter([
   {
@@ -38,7 +39,8 @@ const router = createBrowserRouter([
       {
         path: "/petlisting",
         element: <PetListing></PetListing>,
-        loader: () => fetch("http://localhost:2000/addpet"),
+        loader: () =>
+          fetch("https://final-project-server-eight.vercel.app/addpet"),
       },
       {
         path: "/petdonation",
@@ -60,13 +62,17 @@ const router = createBrowserRouter([
         path: "/donationdetails/:id",
         element: <DonationDetails></DonationDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:2000/creatcampaing/${params.id}`),
+          fetch(
+            `https://final-project-server-eight.vercel.app/creatcampaing/${params.id}`
+          ),
       },
       {
         path: "/details/:id",
         element: <PetDetails></PetDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:2000/addpet/${params.id}`),
+          fetch(
+            `https://final-project-server-eight.vercel.app/addpet/${params.id}`
+          ),
       },
     ],
   },
@@ -76,36 +82,75 @@ const router = createBrowserRouter([
     children: [
       {
         path: "dashboard/addapet",
-        element: <AddAPet></AddAPet>,
+        element: (
+          <PrivateRouter>
+            <AddAPet></AddAPet>
+          </PrivateRouter>
+        ),
       },
       {
         path: "dashboard/myaddedpets",
-        element: <MyAddedPets></MyAddedPets>,
+        element: (
+          <PrivateRouter>
+            <MyAddedPets></MyAddedPets>
+          </PrivateRouter>
+        ),
       },
       {
         path: "dashboard/adoptionrequest",
-        element: <AdoptionRequest></AdoptionRequest>,
+        element: (
+          <PrivateRouter>
+            {" "}
+            <AdoptionRequest></AdoptionRequest>
+          </PrivateRouter>
+        ),
       },
       {
         path: "dashboard/donation",
-        element: <Donation></Donation>,
+        element: (
+          <PrivateRouter>
+            {" "}
+            <Donation></Donation>
+          </PrivateRouter>
+        ),
       },
       {
         path: "dashboard/donationcampaign",
-        element: <DonationCampaign></DonationCampaign>,
+        element: (
+          <PrivateRouter>
+            {" "}
+            <DonationCampaign></DonationCampaign>
+          </PrivateRouter>
+        ),
       },
       {
         path: "dashboard/mydonation",
-        element: <MyDonation></MyDonation>,
+        element: (
+          <PrivateRouter>
+            {" "}
+            <MyDonation></MyDonation>
+          </PrivateRouter>
+        ),
       },
       {
         path: "dashboard/allusers",
-        element: <AllUsers></AllUsers>,
+        element: (
+          <PrivateRouter>
+            <AllUsers></AllUsers>
+          </PrivateRouter>
+        ),
       },
       {
         path: "/dashboard/edit/:id",
-        element: <Edit></Edit>,
-        loader: ({params}) => fetch(`http://localhost:2000/mydonationcampaigns/${params.id}`)
+        element: (
+          <PrivateRouter>
+            <Edit></Edit>
+          </PrivateRouter>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://final-project-server-eight.vercel.app/mydonationcampaigns/${params.id}`
+          ),
       },
     ],
   },

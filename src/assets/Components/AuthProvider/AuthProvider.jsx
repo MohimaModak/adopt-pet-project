@@ -48,7 +48,7 @@ const AuthProvider = ({ children }) => {
   //       // if user exists then issue a token
   //       if (currentUser) {
   //         axios
-  //           .post("http://localhost:2000/jwt", loggedUser, {
+  //           .post("https://final-project-server-eight.vercel.app/jwt", loggedUser, {
   //             withCredentials: true,
   //           })
   //           .then((res) => {
@@ -56,7 +56,7 @@ const AuthProvider = ({ children }) => {
   //           });
   //       } else {
   //         axios
-  //           .post("http://localhost:2000/logout", loggedUser, {
+  //           .post("https://final-project-server-eight.vercel.app/logout", loggedUser, {
   //             withCredentials: true,
   //           })
   //           .then((res) => {

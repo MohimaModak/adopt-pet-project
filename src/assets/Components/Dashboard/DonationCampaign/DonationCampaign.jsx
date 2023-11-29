@@ -10,7 +10,7 @@ const DonationCampaign = () => {
   const [pausedDonation, setpausedDonation] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:2000/mydonationcampaigns")
+    fetch("https://final-project-server-eight.vercel.app/mydonationcampaigns")
       .then((res) => res.json())
       .then((data) => {
         const specificPause = {};

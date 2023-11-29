@@ -3,7 +3,7 @@ import "./Petcategory.css";
 const PetCategory = () => {
   const [pet, setPet] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:2000/pet")
+    fetch("https://final-project-server-eight.vercel.app/pet")
       .then((res) => res.json())
       .then((data) => setPet(data));
   }, []);

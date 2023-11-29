@@ -15,7 +15,7 @@ const Edit = () => {
     };
     console.log(editdonation);
     fetch(
-      `http://localhost:2000/mydonationcampaigns/${_id}`,
+      `https://final-project-server-eight.vercel.app/mydonationcampaigns/${_id}`,
 
       {
         method: "PUT",

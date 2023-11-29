@@ -9,7 +9,7 @@ const MyDonation = () => {
   const [myDonation, setmyDonation] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:2000/dashboardDonation")
+    fetch("https://final-project-server-eight.vercel.app/dashboardDonation")
       .then((res) => res.json())
       .then((data) => setmyDonation(data));
   }, []);
@@ -26,9 +26,12 @@ const MyDonation = () => {
       confirmButtonText: "Yes, I want",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:2000/dashboardDonation/${name}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://final-project-server-eight.vercel.app/dashboardDonation/${name}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
@@ -42,28 +45,37 @@ const MyDonation = () => {
   return (
     <div className="flex justify-center items-center Navfont">
       <div>
-      <h1>Total Donation Amount: {totalAmount}</h1> 
+        <h1 className="text-xl mb-5">
+          <span className="text-teal-600">Total Donation Amount:</span>{" "}
+          <span className="text-orange-400">${totalAmount}</span>
+        </h1>
         <table>
           <thead>
             <tr className="border  border-gray-200 p-2 shadow-md">
-              <th className="border border-gray-200 p-2">Pet-Photo</th>
-              <th className="border border-gray-200 p-2">Pet-Name</th>
-              <th className="border border-gray-200 p-2">Pet-Donation</th>
-              <th className="border border-gray-200 p-2">Remove</th>
+              <th className="border border-gray-200 p-2 text-teal-600">
+                Pet-Photo
+              </th>
+              <th className="border border-gray-200 p-2 text-teal-600">
+                Pet-Name
+              </th>
+              <th className="border border-gray-200 p-2 text-teal-600">
+                Pet-Donation
+              </th>
+              <th className="border border-gray-200 p-2 text-teal-600">
+                Remove
+              </th>
             </tr>
           </thead>
           <tbody>
             {myDonation.map((adopt) => (
               <tr key={adopt._id} className="border border-gray-300 shadow-xl">
                 <td className="border  border-gray-200 p-2">
-                  <img
-                    src={adopt.photo}
-                    alt={adopt.name}
-                    className="rounded-full lg:w-20 lg:h-20"
-                  />
+                  <img src={adopt.photo} className="rounded-full w-20 h-20" />
                 </td>
-                <td className="border border-gray-200 p-2">{adopt.name}</td>
-                <td className="border border-gray-200 p-2">
+                <td className="border border-gray-200 p-2 text-orange-400">
+                  {adopt.name}
+                </td>
+                <td className="border border-gray-200 p-2 text-orange-400">
                   {adopt.donation} $
                 </td>
                 <td

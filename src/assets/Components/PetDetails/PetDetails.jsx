@@ -23,14 +23,14 @@ const PetDetails = () => {
     const adoptUserInfo = { email, name, address, number, ...PetDetailsLoader };
     console.log(adoptUserInfo);
     axios
-      .post("http://localhost:2000/adoptPetUser", adoptUserInfo)
+      .post("https://final-project-server-eight.vercel.app/adoptPetUser", adoptUserInfo)
       .then((data) => {
         console.log(data.data);
         setShowmodal(false);
       });
 
     axios
-      .post("http://localhost:2000/adoptPet",adoptUserInfo,{
+      .post("https://final-project-server-eight.vercel.app/adoptPet",adoptUserInfo,{
         email: user.email,
         name: PetDetailsLoader.name,
         category: PetDetailsLoader.category,

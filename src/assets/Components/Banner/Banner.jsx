@@ -79,7 +79,7 @@ const Banner = () => {
         </Marquee>
       </div>
       <div className="justify-center items-center inset-0 flex absolute z-40">
-        <h1 className="text-6xl font-bold text-white">Pet Adoption</h1>
+        <h1 className="md:text-6xl font-bold text-white">Pet Adoption</h1>
       </div>
     </div>
   );

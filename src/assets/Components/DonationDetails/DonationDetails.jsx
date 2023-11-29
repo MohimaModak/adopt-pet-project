@@ -14,7 +14,7 @@ const DonationDetails = () => {
   };
   const handleDashboardDonation = () => {
     axios
-      .post("http://localhost:2000/dashboardDonation", {
+      .post("https://final-project-server-eight.vercel.app/dashboardDonation", {
         name: donationDetails.name,
         date: donationDetails.date,
         photo: donationDetails.photo,

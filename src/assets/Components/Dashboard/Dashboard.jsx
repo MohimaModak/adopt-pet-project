@@ -4,11 +4,15 @@ import { GrUploadOption } from "react-icons/gr";
 import { NavLink, Outlet } from "react-router-dom";
 import { TbBrandCampaignmonitor } from "react-icons/tb";
 import { SiCampaignmonitor } from "react-icons/si";
+import { useState } from "react";
 
 const Dashboard = () => {
+
+  const hlwAdmin = true
+
   return (
       <div className="flex">
-        <div className="w-64 min-h-screen shadow-2xl text-center">
+        <div className="lg:w-64 min-h-screen shadow-2xl text-center">
           <ul className="menu">
             <li>
               <NavLink to={"dashboard/addapet"}>
@@ -58,7 +62,7 @@ const Dashboard = () => {
             </li>
           </ul>
         </div>
-      <div className="flex-1">
+      <div className="flex-1 overflow-x-auto">
         <Outlet></Outlet>
       </div>
     </div>
@@ -66,3 +70,7 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+
+
+
